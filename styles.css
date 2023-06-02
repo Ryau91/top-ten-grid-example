@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    font-family: leitura;
+}
+
+@font-face{
+    font-family: leitura;
+    src:url(Leitura\ Display\ Swashes.otf);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: #dddddd;
+}
+
+.grid-container {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(15, 8vw);
+    font-size: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: repeat(15, 16vw);
+        font-size: 4vw;
+    }
+}
+
+.grid-container div{
+    border: 3px solid #aaaaaa;
+    border-radius: 20px;
+    margin: 1px;
+}
+
+.small-font{font-size: 100%;}
+.big-font{font-size: 115%;}
+
+.white-text {color:white}
+.mint-text{color: #ccefeb}
+.blue-text{color:#6d8dc8}
+.lilac-text{color:#ede5f0}
+.plum-text{color:#a582bc}
+
+.white-bg {background-color:white}
+.mint-bg{background-color: #ccefeb}
+.blue-bg{background-color:#6d8dc8}
+.lilac-bg{background-color:#ede5f0}
+.plum-bg{background-color:#a582bc}
+
+.header{
+    grid-column: span 3;
+}
+
+.item-1{grid-row: span 6;}
+.item-2, .item-10{grid-column: span 2; grid-row: span 2;}
+.item-3, .item-5, .item-7, .item-8{grid-row: span 4;}
+.item-4, .item-9{grid-row: span 2;}
+.item-6{grid-column: span 2; grid-row: span 4;}
+
+p {
+    position: relative;
+    text-shadow: 1px 1px grey;
+    text-align: center;
+    top: -2vw;
+}
+
+.grid-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.item-1{background-image: url(images/spain.jpg);}
+.item-2{background-image: url(images/usa.jpg);}
+.item-3{background-image: url(images/france.jpg);}
+.item-4{background-image: url(images/italy.jpg);}
+.item-5{background-image: url(images/greece.jpg);}
+.item-6{background-image: url(images/portugal.jpg);}
+.item-7{background-image: url(images/germany.jpg);}
+.item-8{background-image: url(images/canada.jpg);}
+.item-9{background-image: url(images/australia.jpg);}
+.item-10{background-image: url(images/turkey.jpg);}
